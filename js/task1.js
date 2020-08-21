@@ -8,18 +8,13 @@
 // с индексом 0 будет выведено '1 - Mango',
 //     а для индекса 2 выведет '3 - Ajax'.
 
-let message = " ";
-
 const logItems = function (array) {
-  for (let i = 0; i < logItems.length; i += 1) {
-    message = `${logItems[i] + 1} += i`;
+  let message = " ";
+  for (let i = 0; i <= array.length - 1; i += 1) {
+    message += ` ${[i + 1]} - ${array[i]} \n `;
   }
   return message;
 };
 
-/*
- * Вызовы функции для проверки работоспособности твоей реализации.
- */
-logItems(["Mango", "Poly", "Ajax", "Lux", "Jay", "Kong"]);
-
-logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
+console.log(logItems(["Mango", "Poly", "Ajax", "Lux", "Jay", "Kong"]));
+console.log(logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]));
