@@ -16,9 +16,31 @@
 // prompt записывать в массив чисел не нужно, после чего снова пользователю
 // предлагается ввести число в prompt.
 
+"use strict";
 let input;
 const numbers = [];
 let total = 0;
+do {
+  input = Number(prompt("Введите число"));
+  numbers.push(input);
+} while (input);
+for (let i = 0; i < numbers.length; i += 1) {
+  total += numbers[i];
+}
+console.log(`Общая сумма чисел равна ${total}`);
+
+// "use script";
+// let input;
+// const numbers = [];
+// let total = 0;
+// do {
+//   input = Number(prompt("введи число"));
+//   numbers.push(input);
+// } while (input !== null);
+// for (let i = 0; i < numbers.length; i += 1) {
+//   total += numbers[i];
+// }
+// console.log(`Общая сумма чисел равна ${total}`);
 
 // задача-6 бот
 // Напиши функцию mapArray(array), принимающую 1 параметр array - массив чисел.
@@ -39,30 +61,3 @@ let total = 0;
 // [-20, 0, 20]
 //console.log(mapArray([-2.5, 0, 2.5]));
 // [-25, 0, 25]
-
-// задача-7 бот
-// Создание нового массива на основе отбора из исходного массива
-// Напиши функцию filterArray(array),
-//  принимающую 1 параметр array - массив.
-// Функция проверяет каждое значение массива -
-// является ли значение конечным числом(Number.isFinite).
-// Для проверки используй цикл for.Числа добавляются в
-// новый массив numbers с помощью метода push,
-// а не числа - игнорируются.По завершению
-// проверки массива array возвращается массив numbers.
-
-// function filterArray(array) {
-//   "use strict";
-//   const numbers = [];
-//   for (let i = 0; i < array.length; i += 1) {
-//     if (Number.isFinite(array[i])) {
-//       numbers.push(array[i]);
-//     }
-//   }
-//   return numbers;
-// }
-// console.log(filterArray([-2, 0, 2]));
-// [-2, 0, 2]
-
-//console.log(filterArray([1, NaN, Infinity]));
-// [1]
